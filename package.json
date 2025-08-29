@@ -7,7 +7,7 @@
 		"build": "webpack --mode production",
 		"dev": "webpack serve --mode development",
 		"start:dev": "concurrently \"npm run dev\" \"npm start --prefix server\"",
-		"start:prod": "npm run build && concurrently \"npm start --prefix server\" \"serve -s dist -l 5000\"",
+		"start:prod": "npm run build && concurrently \"npm start --prefix server\" \"serve -s dist -l 4000\"",
 		"setup": "npm install && npm install --prefix server"
 	},
 	"dependencies": {
