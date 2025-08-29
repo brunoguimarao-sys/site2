@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
   const images = [
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b5b?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b6c?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b7d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b8e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b9f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b1a?q=80&w=800&auto=format&fit=crop",
+    "https://img.freepik.com/free-photo/cute-plush-toy-with-knitted-hat-scarf_123827-23221.jpg",
+    "https://img.freepik.com/free-photo/beautiful-knitted-toy-for-children_123827-23222.jpg",
+    "https://img.freepik.com/free-photo/cute-knitted-toy-with-big-eyes_123827-23223.jpg",
+    "https://img.freepik.com/free-photo/handmade-knitted-toy-with-bow_123827-23224.jpg",
+    "https://img.freepik.com/free-photo/plush-toy-with-big-ears-and-bow_123827-23225.jpg",
+    "https://img.freepik.com/free-photo/cute-toy-with-big-eyes-and-hat_123827-23226.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

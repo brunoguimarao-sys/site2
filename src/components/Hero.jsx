@@ -74,7 +74,7 @@ const Hero = ({ onContactClick, onPortfolioClick }) => {
           <img  
             alt="Boneca amigurumi feita à mão"
             className="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b5b?q=80&w=1223&auto=format&fit=crop" />
+            src="https://img.freepik.com/free-photo/cute-little-stuffed-toy-bear-with-bow-tie-is-sitting-on-a-white-background_123827-23220.jpg" />
         </motion.div>
       </div>
     </section>
