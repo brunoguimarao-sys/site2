@@ -6,8 +6,8 @@
 		"start": "webpack serve --mode development --open",
 		"build": "webpack --mode production",
 		"dev": "webpack serve --mode development",
-		"start:dev": "concurrently \"npm run dev\" \"npm start --prefix server\"",
-		"start:prod": "npm run build && concurrently \"npm start --prefix server\" \"serve -s dist -l 4000\"",
+		"start:dev": "npx concurrently \"npm run dev\" \"npm start --prefix server\"",
+		"start:prod": "npm run build && npx concurrently \"npm start --prefix server\" \"serve -s dist -l 4000\"",
 		"setup": "npm install && npm install --prefix server"
 	},
 	"dependencies": {
@@ -53,6 +53,7 @@
 		"html-webpack-plugin": "^5.5.0",
 		"postcss": "^8.4.31",
 		"postcss-loader": "^7.3.0",
+		"serve": "^14.2.4",
 		"style-loader": "^3.3.0",
 		"tailwindcss": "^3.3.3",
 		"terser": "^5.39.0",
