@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 const Header = ({ onContactClick }) => {
@@ -23,6 +24,7 @@ const Header = ({ onContactClick }) => {
             <a href="#home" className="hover:text-pink-600 transition-colors dark:hover:text-pink-400">Início</a>
             <a href="#services" className="hover:text-pink-600 transition-colors dark:hover:text-pink-400">Produtos</a>
             <a href="#portfolio" className="hover:text-pink-600 transition-colors dark:hover:text-pink-400">Galeria</a>
+            <Link to="/blog" className="hover:text-pink-600 transition-colors dark:hover:text-pink-400">Blog</Link>
             <a href="#contact" className="hover:text-pink-600 transition-colors dark:hover:text-pink-400">Contato</a>
           </div>
           <Button onClick={() => window.open('https://wa.me/5519994461544', '_blank')} className="bg-gradient-to-r from-pink-500 to-yellow-400 hover:from-pink-600 hover:to-yellow-500">
