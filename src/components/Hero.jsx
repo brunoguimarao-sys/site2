@@ -72,9 +72,9 @@ const Hero = ({ onContactClick, onPortfolioClick }) => {
           transition={{ delay: 1.2 }}
         >
           <img  
-            alt="Bonecas amigurumi feitas à mão"
+            alt="Boneca amigurumi feita à mão"
             className="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1374&auto=format&fit=crop" />
+            src="/gallery/hero.webp" />
         </motion.div>
       </div>
     </section>

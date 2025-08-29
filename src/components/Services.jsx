@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server, Code, BarChart, ShieldCheck, CheckCircle, Bot } from 'lucide-react';
+import { Server, Code, BarChart, ShieldCheck, CheckCircle, Bot, Palette, Gift, Home } from 'lucide-react';
 
 const servicesData = [
 	{
-		icon: <Code className="w-8 h-8 text-pink-500" />,
+		icon: <Bot className="w-8 h-8 text-pink-500" />, // Ícone representando bonecas feitas à mão
 		title: 'Bonecas Amigurumi',
 		description:
 			'Bonecas feitas à mão em crochê, perfeitas para presentear ou decorar.',
@@ -15,7 +15,7 @@ const servicesData = [
 		],
 	},
 	{
-		icon: <CheckCircle className="w-8 h-8 text-yellow-500" />,
+		icon: <Palette className="w-8 h-8 text-yellow-500" />, // Ícone representando personalização
 		title: 'Personalização',
 		description:
 			'Encomende bonecas personalizadas: escolha cores, roupas e acessórios.',
@@ -26,7 +26,7 @@ const servicesData = [
 		],
 	},
 	{
-		icon: <BarChart className="w-8 h-8 text-green-500" />,
+		icon: <Gift className="w-8 h-8 text-green-500" />, // Ícone representando presentes
 		title: 'Presentes Artesanais',
 		description:
 			'Surpreenda alguém especial com um presente feito à mão, cheio de afeto.',
@@ -37,7 +37,7 @@ const servicesData = [
 		],
 	},
 	{
-		icon: <ShieldCheck className="w-8 h-8 text-purple-500" />,
+		icon: <Home className="w-8 h-8 text-purple-500" />, // Ícone representando decoração afetiva
 		title: 'Decoração Afetiva',
 		description:
 			'Bonecas para decorar quartos, festas e ambientes com charme artesanal.',
