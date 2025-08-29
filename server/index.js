@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3001;
+const port = process.env.NODE_ENV === 'production' ? 5001 : 4000;
 
 // Middleware
 app.use(cors());
@@ -52,4 +52,5 @@ Mensagem: ${message}
 // Start server
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on http://0.0.0.0:${port}`);
+  console.log(`Server is also accessible on http://localhost:${port}`);
 });

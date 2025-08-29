@@ -70,7 +70,7 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
-    port: 3000,
+    port: 4000, // Alterado para 4000
     open: true,
     hot: true,
     historyApiFallback: true,
@@ -81,5 +81,5 @@ module.exports = {
     },
   },
 };
-  
+
 
