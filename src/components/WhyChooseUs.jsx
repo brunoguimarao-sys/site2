@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
   const images = [
-    "/gallery/image1.png",
-    "/gallery/image2.webp",
-    "/gallery/image3.jpg",
-    "/gallery/image4.jpg",
-    "/gallery/image5.jpg",
-    "/gallery/image6.webp",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b5b?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b6c?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b7d?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b8e?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b9f?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611223235235-4b3b9b5b5b1a?q=80&w=800&auto=format&fit=crop",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
