@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
@@ -6,25 +5,25 @@ import Modal from './ui/Modal';
 
 const projectsData = [
   {
-    title: "E-commerce Avançado",
-    description: "Plataforma completa com pagamentos integrados e gestão de estoque",
-    longDescription: "Desenvolvemos uma plataforma de e-commerce robusta e escalável, com um design moderno e focado na experiência do usuário. A solução inclui integração com os principais gateways de pagamento, um sistema de gerenciamento de estoque em tempo real, e um painel administrativo completo para o lojista.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    image: "https://plus.unsplash.com/premium_photo-1677995700941-100976883af7?q=80&w=1223&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    title: "Boneca Ursinha",
+    description: "Amigurumi de ursinha feito à mão, ideal para presentear crianças.",
+    longDescription: "Boneca ursinha confeccionada em crochê, com detalhes delicados e enchimento antialérgico. Perfeita para decoração de quartos infantis ou para presentear com carinho.",
+    tech: ["Crochê", "Fio 100% algodão", "Enchimento antialérgico"],
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1223&auto=format&fit=crop"
   },
   {
-    title: "Dashboard Analytics",
-    description: "Sistema de análise de dados em tempo real com visualizações interativas",
-    longDescription: "Criamos um dashboard de analytics para visualização de dados em tempo real. A plataforma permite que os usuários monitorem métricas importantes através de gráficos e tabelas interativas, com filtros dinâmicos e a capacidade de exportar relatórios.",
-    tech: ["Vue.js", "Python", "MongoDB", "D3.js"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    title: "Boneca Bailarina",
+    description: "Amigurumi bailarina com saia de tule e sapatilhas de crochê.",
+    longDescription: "Boneca bailarina feita à mão, com saia de tule, sapatilhas e laço. Personalizável nas cores e acessórios. Ideal para colecionadores e decoração temática.",
+    tech: ["Crochê", "Tule", "Personalização de cores"],
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1223&auto=format&fit=crop"
   },
   {
-    title: "Automação com N8N",
-    description: "Integração de sistemas e automação tarefas, incluindo chatbots para atendimento e vendas.",
-    longDescription: "Implementamos uma solução de automação de processos utilizando N8N para conectar diferentes sistemas e APIs. O projeto incluiu a criação de chatbots inteligentes para atendimento ao cliente e qualificação de leads, otimizando o fluxo de vendas e suporte.",
-    tech: ["N8N", "Chatbot", "APIs", "Webhook"],
-    image: "https://plus.unsplash.com/premium_photo-1676637656166-cb7b3a43b81a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    title: "Boneca Unicórnio",
+    description: "Amigurumi unicórnio colorido, feito com fios premium.",
+    longDescription: "Boneca unicórnio artesanal, com crina colorida e chifre dourado. Feita com fios premium e enchimento macio. Um presente encantador para todas as idades.",
+    tech: ["Crochê", "Fios premium", "Detalhes artesanais"],
+    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=1223&auto=format&fit=crop"
   }
 ];
 
@@ -43,7 +42,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-slate-50 to-indigo-100 dark:from-card dark:to-background">
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-pink-100 to-yellow-100">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -52,11 +51,11 @@ const Portfolio = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-            Projetos em Destaque
+          <h2 className="text-4xl md:text-5xl font-bold text-pink-500 mb-6">
+            Galeria de Bonecas
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Conheça alguns dos projetos que desenvolvemos com excelência
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Veja alguns exemplos de bonecas amigurumi feitas à mão e inspire-se para sua encomenda!
           </p>
         </motion.div>
 
@@ -64,7 +63,7 @@ const Portfolio = () => {
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 dark:bg-card dark:shadow-none dark:border dark:border-border"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-transform duration-500 hover:-translate-y-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -74,14 +73,14 @@ const Portfolio = () => {
                 <img  
                   alt={`Projeto ${project.title}`}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                 src={project.image} />
+                  src={project.image} />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm dark:bg-blue-900 dark:text-blue-300">
+                    <span key={idx} className="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
@@ -89,7 +88,7 @@ const Portfolio = () => {
                 <Button 
                   variant="outline" 
                   onClick={() => openModal(project)}
-                  className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"
+                  className="w-full border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
                 >
                   Ver Detalhes
                 </Button>

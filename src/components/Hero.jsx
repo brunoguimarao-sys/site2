@@ -29,7 +29,7 @@ const Hero = ({ onContactClick, onPortfolioClick }) => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center hero-pattern pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-yellow-100 pt-20">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12 py-16">
         <motion.div
           variants={containerVariants}
@@ -37,60 +37,49 @@ const Hero = ({ onContactClick, onPortfolioClick }) => {
           animate="visible"
           className="lg:w-1/2 text-center lg:text-left"
         >
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight">
-            Tecnologia que Conecta,
-            <span className="block">Soluções que Libertam</span>
+          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-cursive text-pink-500 mb-6 leading-tight">
+            Encante-se com Nossas Bonecas,
+            <span className="block text-yellow-500">Feitas com Carinho</span>
           </motion.h1>
           
-          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-            Traduzimos o potencial da tecnologia em ferramentas acessíveis que fortalecem conexões humanas entre empresas e clientes.
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
+            Cada boneca é única, feita à mão com fios de alta qualidade. Perfeitas para presentear ou decorar com afeto.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
             <Button 
               size="lg" 
               onClick={handleWhatsAppClick}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4 pulse-glow"
+              className="bg-pink-500 hover:bg-pink-600 text-white text-lg px-8 py-4 rounded-xl shadow-lg"
             >
-              Começar Projeto <ArrowRight className="ml-2 w-5 h-5" />
+              Encomendar Agora
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               onClick={onPortfolioClick}
-              className="text-lg px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"
+              className="text-lg px-8 py-4 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white rounded-xl"
             >
-              Ver Portfólio
+              Ver Galeria
             </Button>
           </motion.div>
         </motion.div>
 
         <motion.div 
-          className="lg:w-1/2 mt-16 lg:mt-0 floating-animation flex justify-center items-center"
+          className="lg:w-1/2 mt-16 lg:mt-0 flex justify-center items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
           <img  
-            alt="Equipe de desenvolvimento trabalhando em projetos digitais"
-            className="rounded-2xl shadow-2xl w-full max-w-md lg:max-w-full h-auto object-cover"
-           src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            alt="Bonecas amigurumi feitas à mão"
+            className="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-full h-auto object-cover"
+            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1374&auto=format&fit=crop" />
         </motion.div>
       </div>
-      {/* Scroll Indicator visível ao final da seção Hero */}
-      <ScrollIndicator />
     </section>
   );
 };
-
-// Adiciona um scroll indicator animado no final da seção Hero
-const ScrollIndicator = () => (
-  <div className="flex justify-center mt-10 animate-bounce">
-    <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 24l-8-8h16l-8 8z" fill="#64748b"/>
-    </svg>
-  </div>
-);
 
 export default Hero;
 

@@ -103,16 +103,16 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold mb-6">Entre em Contato</h3>
             <div className="space-y-6">
               <div className="flex items-center">
-                <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
-                <span>contato@overnit.com</span>
+                <Mail className="w-6 h-6 text-pink-600 mr-4" />
+                <span>contato@feitoamigurumi.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
-                <span>(19) 99446-1544</span>
+                <Phone className="w-6 h-6 text-pink-600 mr-4" />
+                <span>(11) 91234-5678</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4" />
-                <span>Indaiatuba, SP - Brasil</span>
+                <MapPin className="w-6 h-6 text-pink-600 mr-4" />
+                <span>São Paulo, SP - Brasil</span>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   size="icon"
-                  onClick={() => window.open('https://www.instagram.com/overnitcom/', '_blank')}
+                  onClick={() => window.open('https://www.instagram.com/feitoamigurumi/', '_blank')}
                   aria-label="Instagram"
                   className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-white"
                 >

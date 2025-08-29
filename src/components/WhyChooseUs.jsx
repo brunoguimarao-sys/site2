@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Handshake, Heart, Lightbulb, Target } from 'lucide-react';
 
-const WhyChooseUs = () => {
+const Gallery = () => {
+  const images = [
+    "/gallery/image1.png",
+    "/gallery/image2.webp",
+    "/gallery/image3.jpg",
+    "/gallery/image4.jpg",
+    "/gallery/image5.jpg",
+    "/gallery/image6.webp",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImages = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 3) % images.length);
+  };
+
+  const prevImages = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 3 + images.length) % images.length);
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <section className="py-20 bg-gradient-to-r from-pink-100 to-yellow-100">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -13,56 +31,50 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Nossos Valores
+          <h2 className="text-4xl md:text-5xl font-bold text-pink-500 mb-6">
+            Galeria
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Nossos valores são a base de tudo que fazemos.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore nossa coleção de bonecas amigurumi feitas à mão.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              icon: <Handshake className="w-12 h-12" />,
-              title: "Integridade",
-              description: "Transparência total em cada projeto. O que prometemos é o que entregamos."
-            },
-            {
-              icon: <Heart className="w-12 h-12" />,
-              title: "Empatia",
-              description: "Entender a sua dor antes de propor a solução."
-            },
-            {
-              icon: <Lightbulb className="w-12 h-12" />,
-              title: "Inovação",
-              description: "Buscar incansavelmente a ferramenta certa para o seu desafio específico."
-            },
-            {
-              icon: <Target className="w-12 h-12" />,
-              title: "Comprometimento",
-              description: "O seu resultado é a nossa única meta."
-            }
-          ].map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
             <motion.div
               key={index}
-              className="text-center"
+              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-500 hover:scale-105"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-blue-200 mb-4 flex justify-center">
-                {item.icon}
-              </div>
-              <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-blue-100">{item.description}</p>
+              <img 
+                src={image} 
+                alt={`Boneca ${currentIndex + index + 1}`} 
+                className="w-full aspect-square object-contain" 
+              />
             </motion.div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-8 gap-4">
+          <button 
+            onClick={prevImages} 
+            className="px-4 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600"
+          >
+            Anterior
+          </button>
+          <button 
+            onClick={nextImages} 
+            className="px-4 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600"
+          >
+            Próximo
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default WhyChooseUs;
+export default Gallery;
